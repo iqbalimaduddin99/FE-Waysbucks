@@ -1,0 +1,32 @@
+.p-hist-transaction{position: absolute;
+width: 524px;
+height: 242px;
+left: 720px;
+top: 216px;
+
+background: #F7DADA;
+border-radius: 10px;}
+
+.p-text-profile{
+
+    position: absolute;
+width: 86px;
+height: 25px;
+left: 404px;
+top: 216px;
+
+font-family: Avenir;
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height */
+
+
+color: #613D2B;
+
+}
+
+.p-text-profile{
+    
+}

@@ -1,0 +1,187 @@
+/* <p className='dp-text-topping'>Topping</p>
+<div className="product">
+    <h2 className="dp-product">{product.title}</h2>
+  <div>
+     <img src={image + product.image} />
+  </div>
+</div> */
+
+.dp-product{
+/* position: absolute; */
+width: 501px;
+height: 66px;
+margin-left: 275px;
+margin-top: 14px;
+
+color: #BD0707;
+font-weight: 700;
+font-size: 48px;
+line-height: 66px;
+}
+
+
+.dp-product-img{
+    position: absolute;
+    width: auto;
+    left: 250px;
+    top: 150px;
+    
+    color: #BD0707;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 66px;
+    }
+
+.dp-topping{
+    padding: 10px 0px;
+    margin: 10px;
+    margin-top: 90px;
+    width: 501px;
+    height: 66px;
+    margin-left:540px ;
+    top: 1014px;
+    
+    color: #BD0707;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 66px;
+    }
+.submit-dp{
+    /* position: relative; */
+    width: 100%;
+    /* height: 40px; */
+    left: 0;
+    /* margin-bottom: 90px; */
+    /* text-align:inherit;  */
+    /* margin-top: 50px; */
+    /* width: 100%; */
+    background-color: #eedcdc !important;
+    border-color: #bd0707 !important;
+
+    background-color: #BD0707 !important;
+    border-radius: 5px;
+    font-size: 18px !important;
+    font-weight: bold !important;
+   
+    color: #FFFFFF;
+        }
+.submit-dp:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+.dp-price{
+  
+width: 110px;
+height: 33px;
+left: 585px;
+
+font-family: Avenir;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 33px;
+color: #974A4A;
+}
+.dp-total{
+    /* width: 110px; */
+    /* height: 33px; */
+    margin-left: 10px;
+    margin-top: 30px;
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    color: #974A4A;
+    }
+.dp-total-price{
+    position: absolute;
+    /* margin-left: 500px;
+    bottom: 100px;
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: #974A4A; */
+
+    /* width: 110px; */
+    /* height: 33px; */
+    margin-left: 420px;
+    bottom: 92px;
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    color: #974A4A;
+        }
+            
+.dp-text-topping{
+    position: absolute;
+    width: 77px;
+    height: 33px;
+    left: 550px;
+    margin-top: 47px;
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    color: #974A4A;
+}
+
+.check-topping{
+    position: absolute;
+    width: 77px;
+    height: 33px;
+    left: 600px;
+    /* margin-top: 7px; */
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 33px;
+    color: #BD0707;
+
+}
+.dp-text-price{
+    /* position: absolute; */
+    margin-left: 280px;
+    /* margin-top: 47px; */
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 33px;
+    color: #974A4A;
+}
+
+
+.dp-topping-img{
+width: 75px;
+height: auto;
+
+cursor: pointer;
+/* left: 600px;
+top: 308px; */
+}
+
+.dp-text-tp{
+    width: 120px;
+    height: 19px;
+    left: 585px;
+    top: 406px;
+    color: #974A4A;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    
+    } 

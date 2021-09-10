@@ -1,0 +1,83 @@
+.lp-rectangle {
+  height: 512px;
+  background: url(../assets/Rectangle2.png);
+  position: absolute;
+  width: 958px;
+  height: 400px;
+  left: 184px;
+  top: 74px;
+  margin: 10px auto;
+  margin-top: 100px;
+  background: #BD0707;
+  border-radius: 10px;
+}
+
+.lp-rectangle1 {
+  position: absolute;
+  left: 40%;
+  right: 0%;
+  top: 81%;
+  bottom: 0%;
+}
+
+.lp-rectangle2 {  
+position: absolute;
+width: 168px;
+height: 100px;
+left: 790px;
+top:  75%; 
+}
+.lp-rectangle3 {
+position: absolute;
+width: 222px;
+height: 140px;
+left: 550px;
+top: 0px;
+}
+.lp-rectangle4 {
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+}
+
+.lp-text-jumbotron { 
+    transform: translateY(100px);
+    text-align: left;
+    position: absolute;
+    color: white;
+    left: 65px;
+    top: -45px;
+  }
+  
+  .lp-text-title {
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 0;
+    text-shadow: 2px 5px 5px rgba(11, 11, 11, 100);
+  }
+  
+  .lp-text-title-admin {
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 0;
+    margin-left: 600px;
+    text-shadow: 2px 5px 5px rgba(11, 11, 11, 100);
+  }
+  .lp-text-second {
+    font-family: Avenir;
+    font-style: normal;
+    font-size: 23px;
+    margin-bottom: 0;
+  }
+  
+.lp-image{
+position: absolute;
+width: 451px;
+height: 324px;
+left: 805px;
+top: 209px; 
+background: url(../assets/Rectangle3.png);
+border-radius: 0px 10px 10px 0px;
+}

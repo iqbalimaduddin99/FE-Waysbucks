@@ -1,0 +1,176 @@
+:root {
+    --modal-overlay: rgba(114, 100, 100, 0.6);
+}
+.lp-modal {
+  position: fixed;
+  background-color: var(--modal-overlay);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+.lp-modal-content-login,
+.lp-modal-content-register {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 10px;
+  width: 420px;
+  background-color: white;
+  z-index: 3;
+}
+.lp-modal-content-login {
+    top: 100px;
+    padding: 30px;
+  }
+  
+  .lp-modal-content-register {
+    top: 100px;
+    padding: 30px;
+  }
+  
+  .lp-modal-title {
+    font-weight: 800;
+    font-size: 36px;
+    color: #BD0707;
+    margin-bottom: 1em;
+  }
+
+  .lp-modal-content-register input[type=text],
+.lp-modal-content-register input[type=password],
+.lp-modal-content-register input[type=number],
+.lp-modal-content-register button[type=submit],
+.lp-modal-content-register textarea {
+  padding: 5px 10px;
+}
+  
+.lp-modal-content-register button[type=submit] {
+    padding: 10px;
+  }
+  
+  .lp-modal-content-login button[type=submit] {
+    margin-top: 20px;
+  }
+
+.alert{
+  width: 100%;
+}
+
+
+
+
+  .form-group-modal input[type=text],
+.form-group-artist input[type=text],
+.form-group-music input[type=text],
+.form-group-modal input[type=email],
+.form-group-modal input[type=password],
+.form-group-modal input[type=number],
+.form-group-music input[type=number],
+.form-group-artist input[type=number],
+.form-group-modal select,
+.form-group-music select,
+.form-group-artist select,
+.form-group-modal textarea {
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  border: solid #BD0707;
+  color: rgb(0, 0, 0);
+}
+
+.form-group-modal button[type=submit]{
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  border: solid #BD0707;
+  color: #fff;
+}
+
+
+.form-group-modal button[type=submit]:active,
+.form-group-artist button[type=submit]:active,
+.form-group-music button[type=submit]:active {
+  opacity: 0.5;
+  background-color: #fff;
+  color: #BD0707;
+}
+
+.form-group-modal input[type=text],
+.form-group-artist input[type=text],
+.form-group-music input[type=text],
+.form-group-music input[type=number],
+.form-group-modal input[type=email],
+.form-group-modal input[type=password],
+.form-group-artist input[type=number],
+.form-group-modal input[type=number],
+.form-group-modal select,
+.form-group-music select,
+.form-group-artist select,
+.form-attached-image,
+.form-group-modal textarea {
+  border: 2px solid #d2d2d2;
+  background-color: rgba(210, 210, 210, 0.25);
+  margin-bottom: 20px;
+}
+
+.form-group-modal select > option,
+.form-group-music select > option,
+.form-group-artist select > option {
+  background-color:#03fcfc;
+  border-radius: 10px;
+}
+
+.form-group-modal button[type=submit] {
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  background-color: #BD0707;;
+}
+
+
+.form-group-modal input[type=text]:focus,
+.form-group-artist input[type=text]:focus,
+.form-group-music input[type=text]:focus,
+.form-group-modal input[type=email]:focus,
+.form-group-modal input[type=password]:focus,
+.form-group-modal input[type=number]:focus,
+.form-group-music input[type=number]:focus,
+.form-group-artist input[type=number]:focus,
+.form-group-payment input[type=number]:focus,
+.form-group-modal select:focus,
+.form-group-music select:focus,
+.form-group-artist select:focus,
+.form-group-modal textarea:focus {
+  outline: none;
+}
+  
+.lp-click-here {
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+  }
+  
+  .lp-click-here span {
+    font-weight: 800;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .lp-click-here span:active {
+    opacity: 0.5;
+  }
+  

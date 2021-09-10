@@ -1,0 +1,54 @@
+.dropdownheader {
+  position: relative;
+  z-index: 5;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 5px;
+  position: absolute;
+  background-color: white;
+  width: 220px;
+  top: 6em;
+  right: 2em;
+  box-shadow: 2px 2px 5px rgba(10, 10, 10, .5),
+              -2px -2px 5px rgba(10, 10, 10, .5);
+}
+
+.dropdownheader:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -1em;
+  right: .5em;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid var(--card-color);
+}
+
+.icon{
+  font-size: 34px;
+  color: #BD0707;
+  margin: 10 21px 
+}
+/* :root {
+    --modal-overlay: rgba(114, 100, 100, 0.6);
+}
+.lp-modal {
+  position: fixed;
+  background-color: var(--modal-overlay);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  } */

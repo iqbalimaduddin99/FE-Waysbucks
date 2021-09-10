@@ -1,0 +1,64 @@
+.lp-body {
+    /* margin: 40px 20px; */
+    margin-top: 540px;
+  }
+
+  /* .lpb-wrapper-product {
+    justify-content: center;
+    position: absolute;
+    display:row;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding-bottom: 30px;
+    width: 241px;
+    height: 392px;
+    left: 196px;
+    top: 706px;
+
+
+    border-radius: 10px;
+  } */
+
+  .lpb-card-product {
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #F7DADA;
+
+
+    width: 241px;
+    height: 452px;
+    left: 472px;
+    top: 706px;
+    border-radius: 10px;
+
+    cursor: pointer; 
+    /* box-shadow: 0 2px 5px rgba(167, 75, 75, 0.8),
+                0 -2px 5px rgba(153, 43, 43, 0.8);*/
+
+
+  } 
+  
+  .lpb-card-product:active {
+    opacity: 0.5;
+  }
+
+  
+.lpb-card-product > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.lpb-card-product > p {
+  margin-top: -1em;
+}
+
+.lpb-product-ty {
+    /* display: flex; */
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .lpb-title-product {
+    font-weight: 700;
+    font-size: 16px;
+  }
