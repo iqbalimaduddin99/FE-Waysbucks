@@ -7,6 +7,7 @@ import { UserContext } from '../context/UserContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket, faUser } from '@fortawesome/free-solid-svg-icons'
 
+import Basket from '../assets/Group.png'
 import Slice1 from '../assets/Slice 1 1.png'
 import Slice2 from '../assets/Slice 2 1.png'
 import Slice3 from '../assets/Slice 3 1.png'
@@ -32,26 +33,18 @@ const HeaderLanding = () => {
         </section>
 
         { (state.user.fullName === 'Admin') ?
-         <section className="lp-btn-group">   
+         <section >   
             <img src={ image + state.user.image } className="lp-btn-profile-admin" alt="profile-pic" onClick={ onClickShow }/>
             <FontAwesomeIcon icon={faUser} className="lp-btn-profile-admin"/>
           <DropdownHeader show={ show } setShow={ setShow } context={ state } />
         </section>
         :
-        <section className="lp-btn-group">
-            <FontAwesomeIcon className="lp-btn-cart"  icon={faShoppingBasket} onClick={ () => history.push('/cart') }/>
+        <section>
+            <img className="lp-btn-cart"  src={Basket} onClick={ () => history.push('/cart') }/>
             <img src={ image + state.user.image }  className="lp-btn-profile" alt="profile-pic" onClick={ onClickShow }/>
             <DropdownHeader show={ show } setShow={ setShow } context={ state } />
         </section>}
-
-
-        
-  
       </nav>
-   
-            // <button type="button" className="lp-btn-login" onClick={ onClickLogin }>Login</button>
-            // <button type="button" className="lp-btn-register" onClick={ onClickRegister }>Register</button>   
-
   )
 }
 

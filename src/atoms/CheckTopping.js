@@ -11,10 +11,13 @@ function CardToping({ topping, key }) {
      
       className="container-toping"
       onClick={() => setIsChosen(!isChosen)}
+
+      // set chooseTopping BE di card ini
+      // tangkap props BE dari cardTopping
     >
        <img className='dp-topping-img' src = {image + topping.image} />
       <p className='dp-text-tp'>{(topping.title > 13 )? `${topping.title}...` : topping.title }</p>
-        { isChosen &&  <FontAwesomeIcon icon={faCheckCircle}/> }
+        { isChosen &&  <FontAwesomeIcon className="check-topping" icon={faCheckCircle}/> }
     </div>
   );
 }

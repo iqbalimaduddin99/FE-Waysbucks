@@ -24,8 +24,8 @@ const DropdownHeader = ({ show, setShow, context: {user} }) => {
 				<div  className="dropdownheader">
 					<Dropdown.Item eventKey="1" onClick={ () => history.push('/') } >Home</Dropdown.Item>
 					<Dropdown.Item eventKey="1" onClick={ () => history.push('/add-product') } >Add Product</Dropdown.Item>
-					<Dropdown.Item eventKey="1" onClick={ () => history.push('/add-topping') } ><img src={ToppingImg}/>Add Topping</Dropdown.Item>
-					<Dropdown.Item eventKey="1" onClick={ () => history.push('/transaction') } ><FontAwesomeIcon icon={faFileInvoice} className="icon" />Transaction</Dropdown.Item>
+					<Dropdown.Item eventKey="1" onClick={ () => history.push('/add-topping') } >Add Topping</Dropdown.Item>
+					<Dropdown.Item eventKey="1" onClick={ () => history.push('/transaction') } >Transaction</Dropdown.Item>
 					<hr className="dd-divider" />
 						<section className="dd-logout" >
 					<Dropdown.Item eventKey="1" onClick={ () => history.push('/logout') } ><IoIosLogOut className="dd-icon" onClick={ () => history.push('/') } /> Logout</Dropdown.Item>

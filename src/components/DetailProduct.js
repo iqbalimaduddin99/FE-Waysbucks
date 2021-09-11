@@ -8,7 +8,13 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { API } from '../config/api'
 import { useHistory, useParams } from 'react-router'
 
-import CardToping from '../atoms/CheckTopping'
+// import CardToping from '../atoms/CheckTopping'
+
+
+
+
+import { FcLike } from 'react-icons/fc';
+
 
 
 const AddProduct = () => {
@@ -77,6 +83,9 @@ const AddProduct = () => {
     //   setLoading('')
     // }
   }
+  
+  // mbikin update transactionproducId dan toppingId buat masukin cartId terus dipush ke button
+  // klo udah sampe cart baru di getcart trus post transaction dengan relation cart
 
   useEffect(() => {
     getToppings()
@@ -118,6 +127,7 @@ const AddProduct = () => {
             {/* <div  key={i}  onClick={()=>{handleCheckClick(topping.id)}} >
              </div> */}
             <CardToping topping={topping}  />
+            {/* tangkap toppin */}
             {/* <p className='dp-text-tp'>{ bikin_handle_itung} </p> */}
           </div>
         </Col>
@@ -129,7 +139,7 @@ const AddProduct = () => {
 <p className="dp-total">Total</p>
 <p className="dp-total-price"> Rp. Total Price</p>
 <Button className="submit-dp" type="submit">
-        Add Cart
+    Add Cart
 </Button>
 </section>
 
@@ -137,9 +147,146 @@ const AddProduct = () => {
   )
 }
 
+
+function CardToping({ topping, key }) {
+  const [isChosen, setIsChosen] = useState(false);
+  const image = 'http://localhost:1000/public/image/'
+
+  // misal disini mbikin untuk chooseTopping. Yg mn choosetopping dimasukkin ke body
+  // dia nagkap productId dari atas
+  return (
+    <div
+     
+      className="container-toping"
+      onClick={() => setIsChosen(!isChosen)}
+
+      // set chooseTopping BE di card ini
+      // tangkap props BE dari cardTopping
+    >
+       <img className='dp-topping-img' src = {image + topping.image} />
+      <p className='dp-text-tp'>{(topping.title > 13 )? `${topping.title}...` : topping.title }</p>
+        { isChosen &&  <FontAwesomeIcon className="check-topping" icon={faCheckCircle}/> }
+    </div>
+ 
+  );
+}
+
+
 export default AddProduct
 
+// export default CardToping;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function CardFeed(props){
+  const { feeds, show, handleClose, setDetail, likes, setLikes } = props;
+  const router = useHistory();
+  const [love, setLove] = useState(feeds.like);
+  const [isLike, setLike] = useState(false);
+  const path = 'http://localhost:5000/uploads/';
+
+  useEffect(() => {
+    setTimeout(() => {
+      cekLike(); 
+    }, 2500);
+    
+    return () => {
+      setLikes([]);
+    }
+  }, []);
+
+  const cekLike = () => {
+    const result = likes.find((like) => like.feedId === feeds.id)
+    if (result) {
+      setLike(true);
+    } else {
+      setLike(false);
+    }
+  }
+
+  const countLike = async (id) => {
+    try {
+      const like = await API.get(`/feed-like/${id}`);
+      console.log(like?.data.data.feed.like);
+      setLove(like?.data?.data?.feed?.like);
+    } catch (error) {
+      console.log(error)
+      console.log(error?.response);
+    }
+  }
+
+  const handleDetailFeed = () => {
+    handleClose(!show);
+    setDetail(feeds);
+  }
+
+  const handleLike = async () => {
+    try {
+      const body = JSON.stringify({ id: feeds?.id });
+      const headers = {
+        headers: { 'Content-Type': 'application/json' }
+      }
+      const response = await API.post('/like', body, headers);
+      checkLike(feeds?.id);
+    } catch (error) {
+      console.log(error?.response);
+    }
+  }
+
+  const checkLike = async (id) => {
+    try {
+      const response = await API.get(`/like/${id}`);
+      console.log(response?.data);
+      if (response?.data?.message === 'like not found') {
+        setLike(false);
+      }
+      if (response?.data?.message === 'success like') {
+        setLike(true);
+      }
+      countLike(id);
+    } catch (error) {
+      setLike(false);
+      console.log(error?.response?.status);
+    }
+  }
+
+  const redirectMessage = () => router.push(`/message/${feeds.user.id}`);
+	return (
+    <div className="fc-card">
+      <img src={ `${path}${feeds?.fileName}`} className="pointer fc-card-img" alt="c1" onClick={ handleDetailFeed } />
+      <section className="fc-card-feedback">
+        <div className="fc-cf-left">
+          <img src={ `${path}${feeds?.user?.image}` } alt="card-icon" />
+          <p className="fc-cf-name">{ feeds?.user?.username }</p>
+        </div>
+        <div className="fc-cf-right">
+          {
+            (isLike) ? 
+            <FcLike onClick={ handleLike } className="cf-love-icon" alt="card-icon" /> :
+            <img  onClick={ handleLike } className="cf-love-icon" alt="card-icon" />
+          }
+          <img onClick={ handleDetailFeed } alt="card-icon" />
+          <img alt="card-icon" onClick={ redirectMessage } />
+        </div>
+      </section>
+      <p>{ love || 0 } Like</p>
+    </div>
+  );
+}
 
 
 

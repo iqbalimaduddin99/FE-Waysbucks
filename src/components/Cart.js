@@ -52,7 +52,7 @@ const LandingPageContent = () => {
             <div>
               <div className="container-subtotal">
                 <div className="container-inside-bottom-cart">
-                  <p>Ini Total Harga</p>
+                  <p>Total Harga</p>
                   <p>66.000</p>
                 </div>
                 <div className="container-inside-bottom-cart">

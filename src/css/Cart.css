@@ -509,8 +509,9 @@
     }
     
     .desc-cart {
+      color: #bd0707;
       margin-top: 50px;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid #bd0707;
     }
     
     .desc-title-cart {
@@ -581,6 +582,7 @@
     
     .container-inside-bottom-cart {
       width: 350px;
+      color: #bd0707;
       display: flex;
       justify-content: space-between;
       margin: 15px 0px;
@@ -591,8 +593,8 @@
     }
 
     .container-subtotal {
-      border-top: 1px solid black;
-      border-bottom:1px solid black;
+      border-top: 1px solid #bd0707;
+      border-bottom:1px solid #bd0707;
     }
     
     .label-input-payment input[type="file"] {
